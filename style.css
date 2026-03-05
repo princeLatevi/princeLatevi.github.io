@@ -1,3 +1,50 @@
+/* ── BURGER + MENU MOBILE ── */
+.burger {
+  display: none;       /* caché par défaut sur PC */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--couleur-texte-fonce);
+}
+
+.menu-mobile {
+  display: none;       /* caché par défaut */
+  flex-direction: column;
+  background: var(--couleur-blanc);
+  border-top: 1px solid var(--couleur-bordure);
+  padding: 12px 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-mobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-mobile ul li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--couleur-texte);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: color var(--transition);
+}
+
+.menu-mobile ul li a:hover,
+.menu-mobile ul li a.actif {
+  color: var(--couleur-orange);
+}
+
 /* ── DÉCLARATION DES COULEURS ── */
 :root {
   --couleur-orange: #e85d04;
@@ -482,8 +529,11 @@ a { text-decoration: none; }
 ════════════════════════════════════════ */
 @media (max-width: 1024px) {
 
-  /* navbar : on cache les liens du milieu */
+  /* on cache les liens du milieu */
   .liens { display: none; }
+
+  /* on affiche le bouton burger */
+  .burger { display: block; }
 
   /* navbar : on réduit le padding */
   .navbar { padding: 0 20px; }
