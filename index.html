@@ -29,9 +29,21 @@
             <input type="text" placeholder="Rechercher..." />
           </div>
           <div class="profil">👤</div>
+          <!-- ✅ AJOUTÉ : bouton burger -->
           <button class="burger" onclick="toggleMenu()">☰</button>
         </div>
       </nav>
+
+      <!-- ✅ AJOUTÉ : menu mobile qui s'ouvre au clic -->
+      <div class="menu-mobile" id="menuMobile">
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#" class="actif">Actualités</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
     <div class="filter-container">
@@ -158,11 +170,9 @@
       </div>
     </div>
 
-    <!-- ════════════ FOOTER ════════════ -->
-
+    <!-- FOOTER -->
     <footer>
       <div class="Grd-footer">
-        <!-- intérieur du footer  -->
         <div class="footer-tt">
           <div class="footer-DGI">
             <a href="#" class="logo">
@@ -175,8 +185,6 @@
             développement de la Côte d'Ivoire.
           </p>
         </div>
-
-        <!-- Liens rapide  -->
         <div class="footer-tt">
           <h4>Liens Rapides</h4>
           <ul>
@@ -186,23 +194,17 @@
             <li><a href="#">Annexe fiscale</a></li>
           </ul>
         </div>
-
-        <!-- support -->
         <div class="footer-tt">
           <h4>Support</h4>
           <ul>
             <li><a href="#">Questions Fréquentes</a></li>
             <li><a href="#">Nous contacter</a></li>
             <li><a href="#">Plaintes &amp; Suggestions</a></li>
-            <li><a href="#">Localiser un centre </a></li>
+            <li><a href="#">Localiser un centre</a></li>
           </ul>
         </div>
-
-        <!-- Suivez nous -->
-
         <div class="footer-tt">
           <h4>Suivez-nous</h4>
-
           <div class="links-icon-tt">
             <div class="icon">
               <a href="#"
@@ -216,16 +218,15 @@
               <a href="#"
                 ><img
                   src="./assets/icône/twitter.png"
-                  alt="facebook"
-                  height="
-                20px"
+                  alt="twitter"
+                  height="20px"
               /></a>
             </div>
             <div class="icon">
               <a href="#"
                 ><img
                   src="./assets/icône/youtube.png"
-                  alt="facebook"
+                  alt="youtube"
                   height="20px"
               /></a>
             </div>
@@ -237,6 +238,8 @@
         réservés.
       </div>
     </footer>
+
+    <!-- ✅ AJOUTÉ : script qui ouvre/ferme le menu burger -->
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menuMobile");
